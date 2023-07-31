@@ -16,9 +16,10 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "manuelsmathew.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
+seo_description          : "Site for Manuel Sathyajith Mathew, PhD research fellow with the University of Agder, Norway."
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -57,12 +58,12 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter "smathewmanuel"
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -72,10 +73,10 @@ social:
 
 
 # Analytics
-analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
+# analytics:
+# provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+# google:
+#  tracking_id          :
 
 
 # Site Author
@@ -84,8 +85,8 @@ author:
   avatar           : "profile.png"
   bio              : "PhD Research Fellow at the University of Agder working on Wind Turbine Prognostics"
   location         : "Grimstad, Norway"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  employer         : "https://www.uia.no"
+  pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=LT7nf6EAAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -99,7 +100,7 @@ author:
   github           : "manuelsmathew"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "smathewmanuel"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "manuelsmathew/"
@@ -109,7 +110,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "smathewmanuel"
+  twitter          : *twitter
   vine             :
   weibo            :
   xing             :
