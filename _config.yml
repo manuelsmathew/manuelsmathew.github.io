@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Manuel Sathyajith Mathew"
 title_separator          : "-"
-name                     : &name "Manuel Sathyajith Mathew"
+name                     : &name "Manuel S Mathew"
 description              : &description "PhD Research Fellow at the University of Agder"
 url                      : https://manuelsmathew.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
