@@ -1,0 +1,7 @@
+# robots.txt for manuelsmathew.github.io
+# ======================================
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
