@@ -1,0 +1,24 @@
+# Claude Code settings
+.claude/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node modules (if you ever add them)
+node_modules/
+
+# VS Code settings (optional)
+.vscode/
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

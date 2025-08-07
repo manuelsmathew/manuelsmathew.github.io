@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <h2>Dr. Academic Portfolio</h2>
+            <div class="nav-brand" id="navBrand" style="opacity: 0;">
+                <h2>Manuel S Mathew</h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -24,45 +24,48 @@
                     <a href="#presentations" class="nav-link" data-section="presentations">Presentations</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#publications" class="nav-link" data-section="publications">Publications</a>
+                </li>
+                <li class="nav-item">
                     <a href="#teaching" class="nav-link" data-section="teaching">Teaching</a>
                 </li>
-                <li class="nav-item theme-toggle-item">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode">
-                        <i class="fas fa-sun"></i>
-                    </button>
+                <li class="nav-item theme-toggle-item" id="navThemeToggle">
+                    <div class="theme-switch" id="themeSwitch">
+                        <input type="checkbox" id="themeToggle" class="theme-checkbox">
+                        <label for="themeToggle" class="theme-slider">
+                            <span class="theme-slider-text dark">🌙</span>
+                            <span class="theme-slider-text light">☀️</span>
+                        </label>
+                    </div>
                 </li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
     <main class="main-content">
         <section id="home" class="section active">
-            <div class="container">
-                <div class="hero-section">
-                    <div class="hero-content">
-                        <div class="profile-image">
-                            <img src="assets/profil.jpg" alt="Profile Picture">
-                        </div>
-                        <div class="hero-text">
-                            <h1>Manuel S Mathew</h1>
-                            <p class="title">AI Researcher</p>
-                            <p class="institution">University of Excellence</p>
-                            <div class="social-links">
-                                <a href="https://no.linkedin.com/in/manuelsmathew/no" class="social-link"><i
-                                        class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-orcid"></i></a>
-                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                            </div>
+            <div class="hero-section" id="heroSection">
+                <div class="hero-content">
+                    <div class="profile-image">
+                        <img src="assets/profil.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="hero-text">
+                        <h1>Manuel S Mathew</h1>
+                        <p class="title">AI Researcher</p>
+                        <p class="institution">University of Excellence</p>
+                        <div class="social-links">
+                            <a href="https://no.linkedin.com/in/manuelsmathew/no" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/manuelsmathew" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="https://orcid.org/0000-0000-0000-0000" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i></a>
+                            <a href="mailto:manuel.s.mathew@university.edu" class="social-link"><i class="fas fa-envelope"></i></a>
+                            <a href="https://medium.com/@manuelsmathew" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
+                            <a href="https://university.edu/faculty/manuel-mathew" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-university"></i></a>
                         </div>
                     </div>
                 </div>
-
+            </div>
+            
+            <div class="container">
                 <div class="bio-section">
                     <div class="card">
                         <h2>About Me</h2>
@@ -241,6 +244,77 @@
                                 <div class="presentation-tags">
                                     <span class="tag">Robustness</span>
                                     <span class="tag">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <div class="container">
+                <h1>Publications</h1>
+                <div class="publications-intro">
+                    <p>My research has been published in top-tier conferences and journals in machine learning, artificial intelligence, and data science. Below is a selection of my recent publications organized by year.</p>
+                </div>
+
+                <div class="publications-section">
+                    <h2>2024</h2>
+                    <div class="publications-list">
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <h3>"Interpretable Neural Networks through Attention Mechanisms"</h3>
+                                <p class="publication-authors">Manuel S. Mathew, Sarah Johnson, David Lee</p>
+                                <p class="publication-venue">International Conference on Machine Learning (ICML 2024)</p>
+                                <p class="publication-abstract">This paper presents novel approaches to interpreting deep neural networks through attention mechanisms and gradient-based visualization techniques...</p>
+                                <div class="publication-links">
+                                    <a href="#" class="publication-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="#" class="publication-link"><i class="fas fa-code"></i> Code</a>
+                                    <a href="#" class="publication-link"><i class="fas fa-external-link-alt"></i> arXiv</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <h3>"Robust Learning Algorithms for Adversarial Environments"</h3>
+                                <p class="publication-authors">Manuel S. Mathew, Alex Chen, Maria Rodriguez</p>
+                                <p class="publication-venue">Neural Information Processing Systems (NeurIPS 2024)</p>
+                                <p class="publication-abstract">We propose novel algorithms for robust machine learning that maintain high performance under adversarial conditions...</p>
+                                <div class="publication-links">
+                                    <a href="#" class="publication-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="#" class="publication-link"><i class="fas fa-code"></i> Code</a>
+                                    <a href="#" class="publication-link"><i class="fas fa-external-link-alt"></i> arXiv</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>2023</h2>
+                    <div class="publications-list">
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <h3>"Ethical Frameworks for AI Decision Making"</h3>
+                                <p class="publication-authors">Manuel S. Mathew, Jennifer Kim, Robert Taylor</p>
+                                <p class="publication-venue">Journal of Artificial Intelligence Research (JAIR 2023)</p>
+                                <p class="publication-abstract">This work establishes comprehensive ethical frameworks for AI systems, focusing on bias detection and mitigation strategies...</p>
+                                <div class="publication-links">
+                                    <a href="#" class="publication-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="#" class="publication-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="publication-item">
+                            <div class="publication-content">
+                                <h3>"Scalable Data Processing for Large-Scale Analytics"</h3>
+                                <p class="publication-authors">Manuel S. Mathew, Lisa Wang, James Brown</p>
+                                <p class="publication-venue">IEEE Transactions on Knowledge and Data Engineering (2023)</p>
+                                <p class="publication-abstract">We present scalable algorithms for processing massive datasets in distributed computing environments...</p>
+                                <div class="publication-links">
+                                    <a href="#" class="publication-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="#" class="publication-link"><i class="fas fa-external-link-alt"></i> IEEE</a>
                                 </div>
                             </div>
                         </div>
@@ -473,6 +547,15 @@
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Manuel S Mathew. All rights reserved.</p>
+                <p>Made with the help of <a href="https://claude.ai/code" target="_blank" rel="noopener noreferrer">Claude Code</a></p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

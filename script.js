@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all navigation links and sections
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
-    const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const navbar = document.getElementById('navbar');
 
     // Handle navigation between sections
     function showSection(sectionId) {
@@ -29,9 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
             activeLink.classList.add('active');
         }
 
-        // Close mobile menu if open
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
 
         // Smooth scroll to top
         window.scrollTo({
@@ -52,13 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle hamburger menu toggle
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-    }
 
     // Handle browser back/forward buttons
     window.addEventListener('popstate', function() {
@@ -70,13 +60,96 @@ document.addEventListener('DOMContentLoaded', function() {
     const initialSection = window.location.hash.substring(1) || 'home';
     showSection(initialSection);
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
+
+    // Smooth header shrinking effect
+    const navBrand = document.getElementById('navBrand');
+    const navThemeToggle = document.getElementById('navThemeToggle');
+    const heroSection = document.getElementById('heroSection');
+    
+    let ticking = false;
+    
+    // Smooth easing function for better transitions
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+    
+    function updateHeader() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Get hero section height dynamically
+        const heroHeight = heroSection ? heroSection.offsetHeight : 400;
+        
+        // Smoother transition with extended range
+        const transitionStart = heroHeight * 0.05; // Start at 5% of hero height
+        const transitionEnd = heroHeight * 0.95; // End at 95% of hero height
+        const rawProgress = Math.max(0, Math.min(1, (scrollTop - transitionStart) / (transitionEnd - transitionStart)));
+        
+        // Apply smooth easing curve for ultra-smooth transitions
+        const scrollProgress = easeInOutCubic(rawProgress);
+        
+        // Find the content container to pull it up
+        const contentContainer = document.querySelector('#home .container');
+        
+        // Smooth hero shrinking and content pulling
+        if (heroSection && scrollTop > transitionStart) {
+            // Smoother scaling with easing
+            const scaleY = Math.max(0.08, 1 - (scrollProgress * 0.92)); // Scale from 1 to 0.08
+            const translateY = scrollProgress * -50; // More dramatic upward movement
+            heroSection.style.transform = `scaleY(${scaleY}) translateY(${translateY}px)`;
+            heroSection.style.transformOrigin = 'top center';
+            
+            // Pull content up more aggressively to eliminate any gap
+            if (contentContainer) {
+                const pullUp = scrollProgress * -(heroHeight * 0.5); // Pull content up by 50% of hero height
+                contentContainer.style.transform = `translateY(${pullUp}px)`;
+            }
         }
-    });
+        
+        // Simultaneous navbar transition with smooth easing
+        if (scrollProgress > 0.02) { // Start extremely early
+            const navRawProgress = Math.min((scrollProgress - 0.02) / 0.8, 1); // Fade over 80% of the transition
+            const navProgress = easeInOutCubic(navRawProgress); // Apply easing to navbar too
+            
+            // Show name in navbar gradually with easing
+            navBrand.style.opacity = navProgress;
+            navBrand.style.transform = `translateY(${1.5 * (1 - navProgress)}px)`;
+            
+            // Keep navigation links always visible
+            navThemeToggle.style.opacity = 1;
+            navThemeToggle.style.transform = 'translateX(0px)';
+            
+            // Add scrolled class for styling
+            if (navProgress > 0.15) {
+                navbar.classList.add('scrolled');
+            }
+        } else {
+            // Reset to initial state
+            navBrand.style.opacity = 0;
+            navBrand.style.transform = 'translateY(1.5px)';
+            navThemeToggle.style.opacity = 1;
+            navThemeToggle.style.transform = 'translateX(0px)';
+            navbar.classList.remove('scrolled');
+            
+            // Reset hero section and content
+            if (heroSection && scrollTop <= transitionStart) {
+                heroSection.style.transform = 'none';
+                if (contentContainer) {
+                    contentContainer.style.transform = 'none';
+                }
+            }
+        }
+        
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
 });
 
 // Presentations Gallery Filtering
@@ -352,11 +425,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.setAttribute('aria-label', 'Main navigation');
     }
 
-    const hamburger = document.querySelector('.hamburger');
-    if (hamburger) {
-        hamburger.setAttribute('aria-label', 'Toggle navigation menu');
-        hamburger.setAttribute('role', 'button');
-    }
 
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
@@ -397,64 +465,48 @@ document.addEventListener('DOMContentLoaded', function() {
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = themeToggle.querySelector('i');
     
     // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('theme') || 'dark';
     
+    function updateThemeToggles(theme) {
+        const isLight = theme === 'light';
+        themeToggle.checked = isLight;
+    }
+    
+    function switchTheme() {
+        const isLight = themeToggle.checked;
+        
+        if (isLight) {
+            // Switch to light mode
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            // Switch to dark mode
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+        }
+        
+        
+        // Add transition effect
+        document.body.style.transition = 'all 0.3s ease';
+        setTimeout(() => {
+            document.body.style.transition = '';
+        }, 300);
+    }
+    
+    
     // Apply the saved theme
     if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        updateThemeToggles('light');
     } else {
         document.documentElement.removeAttribute('data-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        themeToggle.setAttribute('aria-label', 'Toggle light mode');
+        updateThemeToggles('dark');
     }
     
-    // Theme toggle event listener
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        
-        if (currentTheme === 'light') {
-            // Switch to dark mode
-            document.documentElement.removeAttribute('data-theme');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-            themeToggle.setAttribute('aria-label', 'Toggle light mode');
-            localStorage.setItem('theme', 'dark');
-            
-            // Add transition effect
-            document.body.style.transition = 'all 0.3s ease';
-            setTimeout(() => {
-                document.body.style.transition = '';
-            }, 300);
-        } else {
-            // Switch to light mode
-            document.documentElement.setAttribute('data-theme', 'light');
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-            themeToggle.setAttribute('aria-label', 'Toggle dark mode');
-            localStorage.setItem('theme', 'light');
-            
-            // Add transition effect
-            document.body.style.transition = 'all 0.3s ease';
-            setTimeout(() => {
-                document.body.style.transition = '';
-            }, 300);
-        }
-    });
-    
-    // Keyboard accessibility for theme toggle
-    themeToggle.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
-        }
-    });
+    // Theme toggle event listeners
+    themeToggle.addEventListener('change', switchTheme);
 });
 
 // Enhanced Touch Interactions for Mobile
@@ -521,7 +573,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentSection = document.querySelector('.section.active');
             if (!currentSection) return;
             
-            const sections = ['home', 'presentations', 'teaching'];
+            const sections = ['home', 'presentations', 'publications', 'teaching'];
             const currentIndex = sections.indexOf(currentSection.id);
             
             if (diff > 0 && currentIndex < sections.length - 1) {
