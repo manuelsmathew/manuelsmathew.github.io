@@ -1,2 +1,0 @@
-# manuelsmathew.github.io
-Website
