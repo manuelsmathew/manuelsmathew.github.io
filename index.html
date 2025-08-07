@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Dr. Academic Portfolio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#presentations" class="nav-link" data-section="presentations">Presentations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#teaching" class="nav-link" data-section="teaching">Teaching</a>
+                </li>
+                <li class="nav-item theme-toggle-item">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light mode">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <div class="profile-image">
+                            <img src="assets/profil.jpg" alt="Profile Picture">
+                        </div>
+                        <div class="hero-text">
+                            <h1>Manuel S Mathew</h1>
+                            <p class="title">AI Researcher</p>
+                            <p class="institution">University of Excellence</p>
+                            <div class="social-links">
+                                <a href="https://no.linkedin.com/in/manuelsmathew/no" class="social-link"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-orcid"></i></a>
+                                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bio-section">
+                    <div class="card">
+                        <h2>About Me</h2>
+                        <p>Welcome to my academic portfolio. I am a Professor of Computer Science with over 15 years of
+                            experience in machine learning, artificial intelligence, and data science. My research
+                            focuses on developing innovative algorithms that bridge the gap between theoretical computer
+                            science and practical applications.</p>
+                        <p>I am passionate about advancing the field through rigorous research, mentoring the next
+                            generation of computer scientists, and translating complex technical concepts into
+                            accessible knowledge for students and the broader community.</p>
+                    </div>
+                </div>
+
+                <div class="research-overview">
+                    <h2>Research Overview</h2>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <div class="research-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Machine Learning</h3>
+                            <p>Developing novel algorithms for deep learning, focusing on interpretability and
+                                robustness in neural networks.</p>
+                            <div class="research-stats">
+                                <span class="stat">25+ Publications</span>
+                                <span class="stat">1,200+ Citations</span>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Artificial Intelligence</h3>
+                            <p>Exploring ethical AI frameworks and human-computer interaction in intelligent systems.
+                            </p>
+                            <div class="research-stats">
+                                <span class="stat">15+ Publications</span>
+                                <span class="stat">800+ Citations</span>
+                            </div>
+                        </div>
+                        <div class="research-card">
+                            <div class="research-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Data Science</h3>
+                            <p>Applied research in big data analytics, statistical modeling, and predictive analytics
+                                for real-world applications.</p>
+                            <div class="research-stats">
+                                <span class="stat">20+ Publications</span>
+                                <span class="stat">950+ Citations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-news">
+                    <h2>Recent News</h2>
+                    <div class="news-grid">
+                        <div class="news-item">
+                            <div class="news-date">Dec 2024</div>
+                            <h3>Paper Accepted at ICML 2025</h3>
+                            <p>Our work on "Interpretable Neural Networks through Attention Mechanisms" has been
+                                accepted for publication.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Nov 2024</div>
+                            <h3>Keynote Speaker at AI Conference</h3>
+                            <p>Delivered keynote address on "The Future of Ethical AI" at the International AI
+                                Conference.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Oct 2024</div>
+                            <h3>Research Grant Awarded</h3>
+                            <p>Received $500K NSF grant for research on robust machine learning systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="presentations" class="section">
+            <div class="container">
+                <h1>Presentations</h1>
+                <div class="presentations-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="conference">Conference</button>
+                    <button class="filter-btn" data-filter="workshop">Workshop</button>
+                    <button class="filter-btn" data-filter="invited">Invited Talks</button>
+                </div>
+
+                <div class="presentations-gallery">
+                    <div class="presentation-item" data-category="conference">
+                        <div class="presentation-card">
+                            <div class="presentation-image">
+                                <img src="https://via.placeholder.com/400x250/6366f1/ffffff?text=ICML+2024"
+                                    alt="ICML 2024 Presentation">
+                                <div class="presentation-overlay">
+                                    <button class="view-btn" onclick="openModal('modal1')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="presentation-info">
+                                <h3>Neural Network Interpretability</h3>
+                                <p class="presentation-venue">ICML 2024 - Vienna, Austria</p>
+                                <p class="presentation-date">July 2024</p>
+                                <div class="presentation-tags">
+                                    <span class="tag">Machine Learning</span>
+                                    <span class="tag">Deep Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="presentation-item" data-category="workshop">
+                        <div class="presentation-card">
+                            <div class="presentation-image">
+                                <img src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=AI+Workshop"
+                                    alt="AI Workshop">
+                                <div class="presentation-overlay">
+                                    <button class="view-btn" onclick="openModal('modal2')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="presentation-info">
+                                <h3>Ethical AI Frameworks</h3>
+                                <p class="presentation-venue">AI Ethics Workshop - MIT</p>
+                                <p class="presentation-date">May 2024</p>
+                                <div class="presentation-tags">
+                                    <span class="tag">Ethics</span>
+                                    <span class="tag">AI Policy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="presentation-item" data-category="invited">
+                        <div class="presentation-card">
+                            <div class="presentation-image">
+                                <img src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=Keynote"
+                                    alt="Keynote Presentation">
+                                <div class="presentation-overlay">
+                                    <button class="view-btn" onclick="openModal('modal3')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="presentation-info">
+                                <h3>Future of Data Science</h3>
+                                <p class="presentation-venue">Data Science Summit - San Francisco</p>
+                                <p class="presentation-date">March 2024</p>
+                                <div class="presentation-tags">
+                                    <span class="tag">Data Science</span>
+                                    <span class="tag">Industry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="presentation-item" data-category="conference">
+                        <div class="presentation-card">
+                            <div class="presentation-image">
+                                <img src="https://via.placeholder.com/400x250/10b981/ffffff?text=NeurIPS"
+                                    alt="NeurIPS Presentation">
+                                <div class="presentation-overlay">
+                                    <button class="view-btn" onclick="openModal('modal4')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="presentation-info">
+                                <h3>Robust Learning Algorithms</h3>
+                                <p class="presentation-venue">NeurIPS 2023 - New Orleans</p>
+                                <p class="presentation-date">December 2023</p>
+                                <div class="presentation-tags">
+                                    <span class="tag">Robustness</span>
+                                    <span class="tag">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching" class="section">
+            <div class="container">
+                <h1>Teaching</h1>
+                <div class="teaching-intro">
+                    <p>I am passionate about education and have been teaching undergraduate and graduate courses in
+                        computer science for over 10 years. My teaching philosophy centers on making complex concepts
+                        accessible and fostering critical thinking.</p>
+                </div>
+
+                <div class="courses-section">
+                    <h2>Current Courses</h2>
+                    <div class="courses-grid">
+                        <div class="course-card">
+                            <div class="course-header">
+                                <h3>CS 4601: Introduction to Machine Learning</h3>
+                                <span class="course-semester">Spring 2024</span>
+                            </div>
+                            <p class="course-description">Comprehensive introduction to machine learning algorithms,
+                                covering supervised and unsupervised learning, neural networks, and practical
+                                applications.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>45 Students</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>MWF 10:00-11:00</span>
+                                </div>
+                            </div>
+                            <div class="course-materials">
+                                <a href="#" class="material-link">
+                                    <i class="fas fa-file-pdf"></i> Syllabus
+                                </a>
+                                <a href="#" class="material-link">
+                                    <i class="fas fa-book"></i> Lecture Notes
+                                </a>
+                                <a href="#" class="material-link">
+                                    <i class="fas fa-code"></i> Assignments
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <div class="course-header">
+                                <h3>CS 7641: Advanced Machine Learning</h3>
+                                <span class="course-semester">Spring 2024</span>
+                            </div>
+                            <p class="course-description">Graduate-level course covering advanced topics in machine
+                                learning including deep learning, reinforcement learning, and recent research
+                                developments.</p>
+                            <div class="course-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>25 Students</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>TTh 2:00-3:30</span>
+                                </div>
+                            </div>
+                            <div class="course-materials">
+                                <a href="#" class="material-link">
+                                    <i class="fas fa-file-pdf"></i> Syllabus
+                                </a>
+                                <a href="#" class="material-link">
+                                    <i class="fas fa-book"></i> Lecture Notes
+                                </a>
+                                <a href="#" class="material-link">
+                                    <i class="fas fa-project-diagram"></i> Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teaching-philosophy">
+                    <h2>Teaching Philosophy</h2>
+                    <div class="philosophy-content">
+                        <p>My approach to teaching is grounded in the belief that learning should be an active, engaging
+                            process. I strive to create an environment where students feel comfortable asking questions,
+                            making mistakes, and exploring ideas.</p>
+                        <div class="philosophy-points">
+                            <div class="philosophy-point">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h4>Active Learning</h4>
+                                    <p>Encouraging hands-on experience through projects and interactive discussions.</p>
+                                </div>
+                            </div>
+                            <div class="philosophy-point">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Collaborative Environment</h4>
+                                    <p>Fostering peer learning and teamwork in problem-solving.</p>
+                                </div>
+                            </div>
+                            <div class="philosophy-point">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h4>Real-world Applications</h4>
+                                    <p>Connecting theoretical concepts to practical, industry-relevant problems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="student-feedback">
+                    <h2>Student Feedback</h2>
+                    <div class="feedback-grid">
+                        <div class="feedback-card">
+                            <div class="feedback-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Dr. Smith's machine learning course was incredibly well-structured. The assignments were
+                                challenging but fair, and the real-world examples made complex concepts much clearer."
+                            </p>
+                            <div class="feedback-author">- CS Graduate Student</div>
+                        </div>
+                        <div class="feedback-card">
+                            <div class="feedback-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Excellent professor who truly cares about student learning. Office hours were always
+                                helpful, and the course material was presented in an engaging way."</p>
+                            <div class="feedback-author">- Undergraduate Student</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Presentation Details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Neural Network Interpretability</h2>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/600x400/6366f1/ffffff?text=Presentation+Slides"
+                    alt="Presentation Slides">
+                <div class="modal-details">
+                    <p><strong>Venue:</strong> ICML 2024 - Vienna, Austria</p>
+                    <p><strong>Date:</strong> July 21, 2024</p>
+                    <p><strong>Abstract:</strong> This presentation explores novel approaches to interpreting deep
+                        neural networks through attention mechanisms and gradient-based visualization techniques.</p>
+                    <div class="modal-links">
+                        <a href="#" class="btn btn-primary">View Slides</a>
+                        <a href="#" class="btn btn-secondary">Watch Recording</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional modals would be similar -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Ethical AI Frameworks</h2>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Workshop+Slides" alt="Workshop Slides">
+                <div class="modal-details">
+                    <p><strong>Venue:</strong> AI Ethics Workshop - MIT</p>
+                    <p><strong>Date:</strong> May 15, 2024</p>
+                    <p><strong>Abstract:</strong> Discussion on developing ethical frameworks for AI systems, focusing
+                        on bias detection and mitigation strategies.</p>
+                    <div class="modal-links">
+                        <a href="#" class="btn btn-primary">View Slides</a>
+                        <a href="#" class="btn btn-secondary">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Future of Data Science</h2>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=Keynote+Slides" alt="Keynote Slides">
+                <div class="modal-details">
+                    <p><strong>Venue:</strong> Data Science Summit - San Francisco</p>
+                    <p><strong>Date:</strong> March 10, 2024</p>
+                    <p><strong>Abstract:</strong> Keynote address exploring emerging trends in data science and their
+                        impact on industry and society.</p>
+                    <div class="modal-links">
+                        <a href="#" class="btn btn-primary">View Slides</a>
+                        <a href="#" class="btn btn-secondary">Watch Recording</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Robust Learning Algorithms</h2>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/600x400/10b981/ffffff?text=NeurIPS+Slides" alt="NeurIPS Slides">
+                <div class="modal-details">
+                    <p><strong>Venue:</strong> NeurIPS 2023 - New Orleans</p>
+                    <p><strong>Date:</strong> December 8, 2023</p>
+                    <p><strong>Abstract:</strong> Presentation on novel algorithms for robust machine learning under
+                        adversarial conditions.</p>
+                    <div class="modal-links">
+                        <a href="#" class="btn btn-primary">View Slides</a>
+                        <a href="#" class="btn btn-secondary">Download Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
