@@ -12,20 +12,35 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand" id="navBrand">
-                <h2>Manuel S Mathew</h2>
+                <h2>
+                    <span class="full-name">Manuel S Mathew</span>
+                    <span class="initials">MSM</span>
+                </h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span class="nav-text">Home</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="presentations.html" class="nav-link active">Presentations</a>
+                    <a href="presentations.html" class="nav-link active">
+                        <i class="nav-icon fas fa-chart-bar"></i>
+                        <span class="nav-text">Presentations</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="publications.html" class="nav-link">Publications</a>
+                    <a href="publications.html" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <span class="nav-text">Publications</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="teaching.html" class="nav-link">Teaching</a>
+                    <a href="teaching.html" class="nav-link">
+                        <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                        <span class="nav-text">Teaching</span>
+                    </a>
                 </li>
                 <li class="nav-item theme-toggle-item">
                     <button id="themeToggle" class="theme-button" aria-label="Toggle between light and dark modes">
@@ -40,52 +55,50 @@
         <div class="container">
             <h1 class="page-title">Presentations</h1>
             
-            <div class="card">
-                <h2>Conference Presentations</h2>
+            <div class="presentations-filter" style="display: flex; justify-content: center; gap: 1rem; margin: 2rem 0 3rem; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all" style="background: var(--accent-primary); border: 2px solid var(--accent-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">All</button>
+                <button class="filter-btn" data-filter="conference" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Conference</button>
+                <button class="filter-btn" data-filter="workshop" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Workshop</button>
+                <button class="filter-btn" data-filter="invited" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Invited Talks</button>
+            </div>
+
+            <div class="presentations-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
                 
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Neural Network Interpretability</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem;">ICML 2024 - Vienna, Austria | July 2024</p>
-                    <p>Presented novel approaches to interpreting deep neural networks through attention mechanisms and gradient-based visualization techniques. The work demonstrates significant improvements in model transparency without sacrificing performance.</p>
-                    <div style="margin-top: 1rem;">
+                <div class="presentation-item card" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Neural Network Interpretability</h3>
+                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">ICML 2024 - Vienna, Austria</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Presented novel approaches to interpreting deep neural networks through attention mechanisms and gradient-based visualization techniques.</p>
+                    <div>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Machine Learning</span>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">Deep Learning</span>
                     </div>
                 </div>
 
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Robust Learning Algorithms</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem;">NeurIPS 2023 - New Orleans | December 2023</p>
-                    <p>Introduced novel algorithms for robust machine learning that maintain high performance under adversarial conditions. The research addresses critical challenges in deploying ML systems in real-world scenarios.</p>
-                    <div style="margin-top: 1rem;">
+                <div class="presentation-item card" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Robust Learning Algorithms</h3>
+                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">NeurIPS 2023 - New Orleans</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Introduced novel algorithms for robust machine learning that maintain high performance under adversarial conditions.</p>
+                    <div>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Robustness</span>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">Algorithms</span>
                     </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <h2>Workshop Presentations</h2>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Ethical AI Frameworks</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem;">AI Ethics Workshop - MIT | May 2024</p>
-                    <p>Led discussions on developing comprehensive ethical frameworks for AI systems, focusing on bias detection and mitigation strategies. The workshop brought together industry leaders and academics to address pressing ethical concerns.</p>
-                    <div style="margin-top: 1rem;">
+                <div class="presentation-item card" data-category="workshop">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Ethical AI Frameworks</h3>
+                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">AI Ethics Workshop - MIT</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Led discussions on developing comprehensive ethical frameworks for AI systems, focusing on bias detection and mitigation strategies.</p>
+                    <div>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Ethics</span>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">AI Policy</span>
                     </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <h2>Invited Talks</h2>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Future of Data Science</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem;">Data Science Summit - San Francisco | March 2024</p>
-                    <p>Keynote address exploring emerging trends in data science and their impact on industry and society. Discussed the evolution of data science tools, methodologies, and their applications across various sectors.</p>
-                    <div style="margin-top: 1rem;">
+                <div class="presentation-item card" data-category="invited">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Future of Data Science</h3>
+                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">Data Science Summit - San Francisco</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Keynote address exploring emerging trends in data science and their impact on industry and society.</p>
+                    <div>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Data Science</span>
                         <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">Industry</span>
                     </div>
@@ -102,5 +115,39 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Presentation filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const presentationItems = document.querySelectorAll('.presentation-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active filter button
+                    filterButtons.forEach(btn => {
+                        btn.style.background = 'transparent';
+                        btn.style.borderColor = 'var(--border-color)';
+                        btn.style.color = 'var(--text-secondary)';
+                    });
+                    this.style.background = 'var(--accent-primary)';
+                    this.style.borderColor = 'var(--accent-primary)';
+                    this.style.color = 'white';
+
+                    // Filter presentation items
+                    presentationItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        
+                        if (filter === 'all' || category === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

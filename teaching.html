@@ -12,20 +12,35 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-brand" id="navBrand">
-                <h2>Manuel S Mathew</h2>
+                <h2>
+                    <span class="full-name">Manuel S Mathew</span>
+                    <span class="initials">MSM</span>
+                </h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <span class="nav-text">Home</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="presentations.html" class="nav-link">Presentations</a>
+                    <a href="presentations.html" class="nav-link">
+                        <i class="nav-icon fas fa-chart-bar"></i>
+                        <span class="nav-text">Presentations</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="publications.html" class="nav-link">Publications</a>
+                    <a href="publications.html" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <span class="nav-text">Publications</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="teaching.html" class="nav-link active">Teaching</a>
+                    <a href="teaching.html" class="nav-link active">
+                        <i class="nav-icon fas fa-chalkboard-teacher"></i>
+                        <span class="nav-text">Teaching</span>
+                    </a>
                 </li>
                 <li class="nav-item theme-toggle-item">
                     <button id="themeToggle" class="theme-button" aria-label="Toggle between light and dark modes">
@@ -48,7 +63,7 @@
             </div>
 
             <div class="card">
-                <h2>Current Courses</h2>
+                <h2>Courses</h2>
                 
                 <div style="margin-bottom: 3rem; padding: 1.5rem; background: var(--bg-tertiary); border-radius: 8px;">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; gap: 1rem;">
@@ -58,7 +73,7 @@
                     <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Comprehensive introduction to machine learning algorithms,
                         covering supervised and unsupervised learning, neural networks, and practical
                         applications with hands-on programming assignments.</p>
-                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; color: var(--text-secondary); flex-wrap: wrap;">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
                             <i class="fas fa-users" style="color: var(--accent-primary);"></i>
                             <span>45 Students</span>
@@ -67,8 +82,12 @@
                             <i class="fas fa-clock" style="color: var(--accent-primary);"></i>
                             <span>MWF 10:00-11:00</span>
                         </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-calendar-alt" style="color: var(--accent-primary);"></i>
+                            <span>Spring 2024</span>
+                        </div>
                     </div>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
                         <a href="#" style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> Syllabus
                         </a>
@@ -89,7 +108,7 @@
                     <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Graduate-level course covering advanced topics in machine
                         learning including deep learning, reinforcement learning, and recent research
                         developments with extensive project work.</p>
-                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; color: var(--text-secondary); flex-wrap: wrap;">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
                             <i class="fas fa-users" style="color: var(--accent-primary);"></i>
                             <span>25 Students</span>
@@ -98,8 +117,12 @@
                             <i class="fas fa-clock" style="color: var(--accent-primary);"></i>
                             <span>TTh 2:00-3:30</span>
                         </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-calendar-alt" style="color: var(--accent-primary);"></i>
+                            <span>Spring 2024</span>
+                        </div>
                     </div>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
                         <a href="#" style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> Syllabus
                         </a>
@@ -120,23 +143,29 @@
                     making mistakes, and exploring ideas.</p>
                 
                 <div style="display: grid; gap: 1.5rem;">
-                    <div style="display: flex; gap: 1rem;">
-                        <i class="fas fa-lightbulb" style="color: var(--accent-primary); font-size: 1.5rem; margin-top: 0.25rem;"></i>
-                        <div>
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-lightbulb" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        </div>
+                        <div style="flex: 1;">
                             <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Active Learning</h4>
                             <p style="color: var(--text-secondary); margin: 0;">Encouraging hands-on experience through projects and interactive discussions.</p>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 1rem;">
-                        <i class="fas fa-users" style="color: var(--accent-primary); font-size: 1.5rem; margin-top: 0.25rem;"></i>
-                        <div>
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-users" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        </div>
+                        <div style="flex: 1;">
                             <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Collaborative Environment</h4>
                             <p style="color: var(--text-secondary); margin: 0;">Fostering peer learning and teamwork in problem-solving.</p>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 1rem;">
-                        <i class="fas fa-chart-line" style="color: var(--accent-primary); font-size: 1.5rem; margin-top: 0.25rem;"></i>
-                        <div>
+                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                        <div style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-chart-line" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        </div>
+                        <div style="flex: 1;">
                             <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Real-world Applications</h4>
                             <p style="color: var(--text-secondary); margin: 0;">Connecting theoretical concepts to practical, industry-relevant problems.</p>
                         </div>

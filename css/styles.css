@@ -99,11 +99,25 @@ body {
     margin: 0;
 }
 
+.nav-brand .initials {
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
     align-items: center;
+}
+
+/* Navigation icons for mobile - initially hidden */
+.nav-link .nav-icon {
+    display: none;
+    font-size: 1.2rem;
+}
+
+.nav-link .nav-text {
+    display: inline;
 }
 
 .nav-link {
@@ -301,6 +315,47 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Fix navbar mobile issues */
+    .navbar {
+        height: 60px;
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+    }
+    
+    .nav-container {
+        height: 60px;
+        padding: 0 15px;
+    }
+    
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    /* Show initials instead of full name on mobile */
+    .nav-brand .full-name {
+        display: none;
+    }
+    
+    .nav-brand .initials {
+        display: block;
+    }
+    
+    /* Show icons instead of text on mobile */
+    .nav-link .nav-text {
+        display: none;
+    }
+    
+    .nav-link .nav-icon {
+        display: inline;
+    }
+    
+    /* Adjust main content for smaller navbar */
+    .main-content {
+        margin-top: 60px;
+    }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -316,8 +371,14 @@ body {
         font-size: 2.5rem;
     }
     
-    .nav-menu {
-        gap: 1rem;
+    /* Make theme button smaller on mobile */
+    .theme-button {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .theme-icon {
+        font-size: 1.1rem;
     }
 }
 
