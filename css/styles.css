@@ -336,10 +336,16 @@ body {
     .nav-container {
         height: 60px;
         padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .nav-menu {
-        gap: 1.5rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
     }
     
     /* Show initials instead of full name on mobile */
@@ -384,14 +390,21 @@ body {
         font-size: 2.5rem;
     }
     
-    /* Make theme button smaller on mobile */
+    /* Make theme button smaller on mobile and ensure proper spacing */
     .theme-button {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
+        padding: 0.25rem;
+        flex-shrink: 0;
     }
     
     .theme-icon {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    
+    .theme-toggle-item {
+        margin-left: 0.5rem;
+        flex-shrink: 0;
     }
 }
 
