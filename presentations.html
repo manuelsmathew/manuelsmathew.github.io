@@ -80,49 +80,72 @@
             <div class="presentations-filter" style="display: flex; justify-content: center; gap: 1rem; margin: 2rem 0 3rem; flex-wrap: wrap;">
                 <button class="filter-btn active" data-filter="all" style="background: var(--accent-primary); border: 2px solid var(--accent-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">All</button>
                 <button class="filter-btn" data-filter="conference" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Conference</button>
-                <button class="filter-btn" data-filter="workshop" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Workshop</button>
                 <button class="filter-btn" data-filter="invited" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Invited Talks</button>
             </div>
 
-            <div class="presentations-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+            <div class="card" data-category="2024">
+                <h2 style="color: var(--text-primary); margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem;">2024</h2>
                 
-                <div class="presentation-item card" data-category="conference">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Neural Network Interpretability</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">ICML 2024 - Vienna, Austria</p>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Presented novel approaches to interpreting deep neural networks through attention mechanisms and gradient-based visualization techniques.</p>
+                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);" class="presentation-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">Systems Perspective on Public Perception of Wind Power in Norway</h3>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">INCOSE IS 2024 - Dublin, Ireland</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Presented a systems thinking perspective of the formation of public perception of wind power projects in Norway, exploring stakeholder dynamics and decision-making processes that influence renewable energy project acceptance.</p>
                     <div>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Machine Learning</span>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">Deep Learning</span>
+                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
+                            <i class="fas fa-file-pdf"></i> Slides
+                        </a>
                     </div>
                 </div>
 
-                <div class="presentation-item card" data-category="conference">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Robust Learning Algorithms</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">NeurIPS 2023 - New Orleans</p>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Introduced novel algorithms for robust machine learning that maintain high performance under adversarial conditions.</p>
+                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);" class="presentation-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">Enhanced Diagnostics for Wind Turbine Pitch System</h3>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">PHME 2024 - Prague, Czech Republic</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Introduced novel algorithm to detect and localize faults in induction motors in a wind turbine pitch system using SCADA data. Our deep learning approach significantly improves fault detection accuracy and enables proactive maintenance strategies.</p>
                     <div>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Robustness</span>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">Algorithms</span>
+                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
+                            <i class="fas fa-file-pdf"></i> Slides
+                        </a>
                     </div>
                 </div>
 
-                <div class="presentation-item card" data-category="workshop">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Ethical AI Frameworks</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">AI Ethics Workshop - MIT</p>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Led discussions on developing comprehensive ethical frameworks for AI systems, focusing on bias detection and mitigation strategies.</p>
+                <div style="margin-bottom: 2rem;" class="presentation-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">Wind Farm Performance Estimation using Deep Learning</h3>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">PHME 2024 - Prague, Czech Republic</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Presented a comprehensive deep learning architecture to estimate the wind farm level performance using SCADA data. This research enables more accurate performance monitoring and optimization strategies for large-scale wind energy installations.</p>
                     <div>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Ethics</span>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">AI Policy</span>
+                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
+                            <i class="fas fa-file-pdf"></i> Slides
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="presentation-item card" data-category="invited">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Future of Data Science</h3>
-                    <p style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 500;">Data Science Summit - San Francisco</p>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Keynote address exploring emerging trends in data science and their impact on industry and society.</p>
+            <div class="card" data-category="2022">
+                <h2 style="color: var(--text-primary); margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem;">2022</h2>
+                
+                <div style="margin-bottom: 2rem;" class="presentation-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">Modeling Performance of Renewable Energy Systems</h3>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">SpliTech 2022 - Split and Bol, Croatia</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Presented machine learning methodologies for modeling the performance of renewable energy systems, with specific applications to wind and solar energy installations. The presentation explored predictive models for renewable energy output optimization.</p>
                     <div>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Data Science</span>
-                        <span style="background: var(--bg-tertiary); color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem;">Industry</span>
+                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
+                            <i class="fas fa-file-pdf"></i> Slides
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-category="2016">
+                <h2 style="color: var(--text-primary); margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem;">2016</h2>
+                
+                <div style="margin-bottom: 2rem;" class="presentation-item" data-category="invited">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">Optimized Microgrid with Renewable Energy Penetration</h3>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">BICET 2016 - Bandar Seri Begawan, Brunei</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Keynote address exploring econo-environmental sensitivities of an isolated microgrid towards renewable energy penetration rates. The presentation examined optimization strategies for integrating renewable energy sources in microgrid systems.</p>
+                    <div>
+                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
+                            <i class="fas fa-file-pdf"></i> Slides
+                        </a>
                     </div>
                 </div>
             </div>
@@ -142,6 +165,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const presentationItems = document.querySelectorAll('.presentation-item');
+            const yearCards = document.querySelectorAll('.card[data-category]');
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
@@ -157,16 +181,34 @@
                     this.style.borderColor = 'var(--accent-primary)';
                     this.style.color = 'white';
 
-                    // Filter presentation items
-                    presentationItems.forEach(item => {
-                        const category = item.getAttribute('data-category');
-                        
-                        if (filter === 'all' || category === filter) {
+                    if (filter === 'all') {
+                        // Show all year cards
+                        yearCards.forEach(card => {
+                            card.style.display = 'block';
+                        });
+                        presentationItems.forEach(item => {
                             item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
+                        });
+                    } else {
+                        // Filter presentations and hide empty year cards
+                        yearCards.forEach(card => {
+                            const itemsInCard = card.querySelectorAll('.presentation-item');
+                            let hasVisibleItems = false;
+                            
+                            itemsInCard.forEach(item => {
+                                const category = item.getAttribute('data-category');
+                                if (category === filter) {
+                                    item.style.display = 'block';
+                                    hasVisibleItems = true;
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                            
+                            // Show/hide the entire year card based on visible items
+                            card.style.display = hasVisibleItems ? 'block' : 'none';
+                        });
+                    }
                 });
             });
         });

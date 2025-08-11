@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Publications - Manuel S Mathew | AI Research Papers & Academic Publications</title>
-    <meta name="description" content="Browse Manuel S Mathew's academic publications and research papers in machine learning, artificial intelligence, neural networks, and data science from top journals and conferences.">
-    <meta name="keywords" content="Manuel S Mathew publications, AI research papers, machine learning papers, academic publications, journal articles, conference papers, neural networks research, data science publications">
+    <title>Publications - Manuel S Mathew | Renewable Energy AI Research Papers</title>
+    <meta name="description" content="Browse Manuel S Mathew's academic publications in AI for renewable energy systems, wind turbine diagnostics, wind farm analytics, and sustainable energy research from leading journals and conferences.">
+    <meta name="keywords" content="Manuel S Mathew publications, renewable energy AI research, wind energy papers, wind turbine diagnostics, wind farm analytics, sustainable energy research, machine learning wind energy, academic publications renewable energy">
     <meta name="author" content="Manuel S Mathew">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://manuelsmathew.github.io/publications.html">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Publications - Manuel S Mathew | AI Research Papers & Academic Publications">
-    <meta property="og:description" content="Academic publications and research papers in machine learning, artificial intelligence, neural networks, and data science from top journals and conferences.">
+    <meta property="og:title" content="Publications - Manuel S Mathew | Renewable Energy AI Research Papers">
+    <meta property="og:description" content="Academic publications in AI for renewable energy systems, wind turbine diagnostics, wind farm analytics, and sustainable energy research from leading conferences and journals.">
     <meta property="og:image" content="https://manuelsmathew.github.io/assets/profil.jpg">
     <meta property="og:url" content="https://manuelsmathew.github.io/publications.html">
     <meta property="og:type" content="article">
@@ -22,8 +22,8 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Publications - Manuel S Mathew | AI Research Papers">
-    <meta name="twitter:description" content="Academic publications and research papers in machine learning, AI, neural networks, and data science.">
+    <meta name="twitter:title" content="Publications - Manuel S Mathew | Renewable Energy AI Research">
+    <meta name="twitter:description" content="Academic publications in AI for renewable energy systems, wind turbine diagnostics, and sustainable energy research.">
     <meta name="twitter:image" content="https://manuelsmathew.github.io/assets/profil.jpg">
     
     <link rel="stylesheet" href="css/styles.css">
@@ -79,18 +79,25 @@
             
             <div class="card">
                 <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin: 0 0 2rem 0;">
-                    My research has been published in top-tier conferences and journals in machine learning, artificial intelligence, and data science. Below is a selection of my recent publications organized by year.
+                    My research focuses on artificial intelligence applications for renewable energy systems, with publications in leading conferences and journals covering wind energy analytics, turbine diagnostics, and sustainable energy optimization. Below is a selection of my recent publications organized by year.
                 </p>
             </div>
 
-            <div class="card">
+            <div class="publications-filter" style="display: flex; justify-content: center; gap: 1rem; margin: 2rem 0 3rem; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all" style="background: var(--accent-primary); border: 2px solid var(--accent-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">All</button>
+                <button class="filter-btn" data-filter="conference" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Conference</button>
+                <button class="filter-btn" data-filter="journal" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Journal</button>
+                <button class="filter-btn" data-filter="thesis" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Thesis</button>
+            </div>
+
+            <div class="card" data-category="2024">
                 <h2 style="color: var(--text-primary); margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem;">2024</h2>
                 
-                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Interpretable Neural Networks through Attention Mechanisms"</h3>
-                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Sarah Johnson, David Lee</p>
-                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">International Conference on Machine Learning (ICML 2024)</p>
-                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">This paper presents novel approaches to interpreting deep neural networks through attention mechanisms and gradient-based visualization techniques. We demonstrate significant improvements in model transparency without sacrificing performance across multiple benchmarks.</p>
+                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);" class="publication-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Enhanced Diagnostics for Wind Turbine Pitch System Using Deep Learning"</h3>
+                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Dimitrios Tzivaras, Knut E. Giljarhus</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">European Conference of the Prognostics and Health Management Society (PHME 2024)</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">This paper introduces a novel algorithm to detect and localize faults in induction motors within wind turbine pitch systems using SCADA data. Our deep learning approach significantly improves fault detection accuracy and enables proactive maintenance strategies.</p>
                     <div>
                         <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> PDF
@@ -104,11 +111,11 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Robust Learning Algorithms for Adversarial Environments"</h3>
-                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Alex Chen, Maria Rodriguez</p>
-                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Neural Information Processing Systems (NeurIPS 2024)</p>
-                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">We propose novel algorithms for robust machine learning that maintain high performance under adversarial conditions. Our approach demonstrates superior resilience compared to existing methods across various attack scenarios.</p>
+                <div style="margin-bottom: 2rem;" class="publication-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Wind Farm Performance Estimation using Deep Learning Architectures"</h3>
+                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Knut E. Giljarhus, Dimitrios Tzivaras</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">European Conference of the Prognostics and Health Management Society (PHME 2024)</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">We present a comprehensive deep learning architecture for estimating wind farm-level performance using SCADA data. This research enables more accurate performance monitoring and optimization strategies for large-scale wind energy installations.</p>
                     <div>
                         <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> PDF
@@ -123,14 +130,14 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-category="2023">
                 <h2 style="color: var(--text-primary); margin-bottom: 2rem; border-bottom: 2px solid var(--accent-primary); padding-bottom: 0.5rem;">2023</h2>
                 
-                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Ethical Frameworks for AI Decision Making"</h3>
-                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Jennifer Kim, Robert Taylor</p>
-                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">Journal of Artificial Intelligence Research (JAIR 2023)</p>
-                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">This work establishes comprehensive ethical frameworks for AI systems, focusing on bias detection and mitigation strategies. We provide practical guidelines for implementing ethical considerations in AI development workflows.</p>
+                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);" class="publication-item" data-category="conference">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Systems Perspective on Public Perception of Wind Power in Norway"</h3>
+                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Torgeir Moan, Knut E. Giljarhus</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">International Council on Systems Engineering Symposium (INCOSE IS 2024)</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">This research applies systems thinking methodologies to understand the formation of public perception regarding wind power projects in Norway. We provide insights into stakeholder dynamics and decision-making processes affecting renewable energy deployment.</p>
                     <div>
                         <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> PDF
@@ -141,11 +148,11 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Scalable Data Processing for Large-Scale Analytics"</h3>
-                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Lisa Wang, James Brown</p>
-                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">IEEE Transactions on Knowledge and Data Engineering (2023)</p>
-                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">We present scalable algorithms for processing massive datasets in distributed computing environments. Our approach achieves significant performance improvements over existing methods while maintaining data integrity.</p>
+                <div style="margin-bottom: 2rem;" class="publication-item" data-category="journal">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">"Machine Learning Approaches for Renewable Energy System Performance Modeling"</h3>
+                    <p style="color: var(--text-secondary); font-style: italic; margin-bottom: 0.5rem; font-size: 0.95rem;">Manuel S. Mathew, Knut E. Giljarhus</p>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">International Conference on Smart Energy Systems and Technologies (SEST 2022)</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">We present machine learning methodologies for modeling the performance of renewable energy systems, with specific applications to wind and solar energy installations. Our approach enables better prediction and optimization of renewable energy output.</p>
                     <div>
                         <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> PDF
@@ -167,5 +174,58 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Publications filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const publicationItems = document.querySelectorAll('.publication-item');
+            const yearCards = document.querySelectorAll('.card[data-category]');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active filter button
+                    filterButtons.forEach(btn => {
+                        btn.style.background = 'transparent';
+                        btn.style.borderColor = 'var(--border-color)';
+                        btn.style.color = 'var(--text-secondary)';
+                    });
+                    this.style.background = 'var(--accent-primary)';
+                    this.style.borderColor = 'var(--accent-primary)';
+                    this.style.color = 'white';
+
+                    if (filter === 'all') {
+                        // Show all year cards
+                        yearCards.forEach(card => {
+                            card.style.display = 'block';
+                        });
+                        publicationItems.forEach(item => {
+                            item.style.display = 'block';
+                        });
+                    } else {
+                        // Filter publications and hide empty year cards
+                        yearCards.forEach(card => {
+                            const itemsInCard = card.querySelectorAll('.publication-item');
+                            let hasVisibleItems = false;
+                            
+                            itemsInCard.forEach(item => {
+                                const category = item.getAttribute('data-category');
+                                if (category === filter) {
+                                    item.style.display = 'block';
+                                    hasVisibleItems = true;
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                            
+                            // Show/hide the entire year card based on visible items
+                            card.style.display = hasVisibleItems ? 'block' : 'none';
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
