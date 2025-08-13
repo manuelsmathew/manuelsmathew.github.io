@@ -12,6 +12,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://manuelsmathew.github.io/publications.html">
     
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Publications - Manuel S Mathew | Renewable Energy AI Research Papers">
     <meta property="og:description" content="Academic publications in AI for renewable energy systems, wind turbine diagnostics, wind farm analytics, and sustainable energy research from leading conferences and journals.">
@@ -27,8 +31,8 @@
     <meta name="twitter:image" content="https://manuelsmathew.github.io/assets/profil.jpg">
     
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -174,58 +178,59 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Publications filter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const publicationItems = document.querySelectorAll('.publication-item');
-            const yearCards = document.querySelectorAll('.card[data-category]');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const publicationItems = document.querySelectorAll('.publication-item');
+    const yearCards = document.querySelectorAll('.card[data-category]');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
 
-                    // Update active filter button
-                    filterButtons.forEach(btn => {
-                        btn.style.background = 'transparent';
-                        btn.style.borderColor = 'var(--border-color)';
-                        btn.style.color = 'var(--text-secondary)';
-                    });
-                    this.style.background = 'var(--accent-primary)';
-                    this.style.borderColor = 'var(--accent-primary)';
-                    this.style.color = 'white';
-
-                    if (filter === 'all') {
-                        // Show all year cards
-                        yearCards.forEach(card => {
-                            card.style.display = 'block';
-                        });
-                        publicationItems.forEach(item => {
-                            item.style.display = 'block';
-                        });
-                    } else {
-                        // Filter publications and hide empty year cards
-                        yearCards.forEach(card => {
-                            const itemsInCard = card.querySelectorAll('.publication-item');
-                            let hasVisibleItems = false;
-                            
-                            itemsInCard.forEach(item => {
-                                const category = item.getAttribute('data-category');
-                                if (category === filter) {
-                                    item.style.display = 'block';
-                                    hasVisibleItems = true;
-                                } else {
-                                    item.style.display = 'none';
-                                }
-                            });
-                            
-                            // Show/hide the entire year card based on visible items
-                            card.style.display = hasVisibleItems ? 'block' : 'none';
-                        });
-                    }
-                });
+            // Update active filter button
+            filterButtons.forEach(btn => {
+                btn.style.background = 'transparent';
+                btn.style.borderColor = 'var(--border-color)';
+                btn.style.color = 'var(--text-secondary)';
+                btn.classList.remove('active');
             });
+            this.style.background = 'var(--accent-primary)';
+            this.style.borderColor = 'var(--accent-primary)';
+            this.style.color = 'white';
+            this.classList.add('active');
+
+            if (filter === 'all') {
+                // Show all year cards
+                yearCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+                publicationItems.forEach(item => {
+                    item.style.display = 'block';
+                });
+            } else {
+                // Filter publications and hide empty year cards
+                yearCards.forEach(card => {
+                    const itemsInCard = card.querySelectorAll('.publication-item');
+                    let hasVisibleItems = false;
+                    
+                    itemsInCard.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (category === filter) {
+                            item.style.display = 'block';
+                            hasVisibleItems = true;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show/hide the entire year card based on visible items
+                    card.style.display = hasVisibleItems ? 'block' : 'none';
+                });
+            }
         });
-    </script>
+    });
+});
+</script>
 </body>
 </html>

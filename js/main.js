@@ -1,18 +1,12 @@
-// Clean, simple JavaScript for the website
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Get navbar elements
     const navbar = document.getElementById('navbar');
     const navBrand = document.getElementById('navBrand');
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = themeToggle?.querySelector('.theme-icon');
-    
     let ticking = false;
 
     // Theme Toggle Functionality
-    function initTheme() {
-        if (!themeToggle || !themeIcon) return;
-        
+    if (themeToggle && themeIcon) {
         // Check for saved theme preference or default to dark mode
         const savedTheme = localStorage.getItem('theme') || 'dark';
         
@@ -41,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Apply the saved theme
+        // Apply the saved theme on load
         if (savedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
             updateThemeButton('light');
@@ -50,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateThemeButton('dark');
         }
         
-        // Theme toggle event listener
+        // Add click event listener
         themeToggle.addEventListener('click', switchTheme);
     }
 
@@ -105,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize everything
-    initTheme();
     updateNavbarBrand(); // Set initial state
     
     // Listen to scroll events

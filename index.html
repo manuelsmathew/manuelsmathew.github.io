@@ -12,6 +12,16 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://manuelsmathew.github.io/">
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="assets/profil.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" crossorigin>
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="Manuel S Mathew - AI Researcher in Renewable Energy Systems">
     <meta property="og:description" content="PhD Research Fellow at University of Agder specializing in artificial intelligence for wind energy systems, renewable energy optimization, and sustainable technology solutions.">
@@ -37,6 +47,14 @@
     <meta name="theme-color" content="#6366f1">
     <meta name="msapplication-TileColor" content="#6366f1">
     <meta name="application-name" content="Manuel S Mathew Portfolio">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        :root{--bg-primary:#000;--text-primary:#f8fafc;--accent-primary:#6366f1;--navbar-bg:rgba(0,0,0,.95)}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text-primary);background:var(--bg-primary);margin:0;padding:0}
+        .navbar{position:fixed;top:0;left:0;right:0;width:100%;height:70px;background:var(--navbar-bg);backdrop-filter:blur(10px);z-index:9999}
+    </style>
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -82,8 +100,8 @@
     </script>
     
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -132,7 +150,7 @@
         <section class="hero-section">
             <div class="hero-content">
                 <div class="profile-image">
-                    <img src="assets/profil.jpg" alt="Manuel S Mathew Profile Picture">
+                    <img src="assets/profil.jpg" alt="Manuel S Mathew Profile Picture" width="250" height="250" loading="eager">
                 </div>
                 <div class="hero-text">
                     <h1>Manuel S Mathew</h1>

@@ -12,6 +12,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://manuelsmathew.github.io/presentations.html">
     
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Presentations - Manuel S Mathew | AI Research & Conference Talks">
     <meta property="og:description" content="Research presentations from top AI conferences including ICML, NeurIPS, and invited talks on machine learning, neural networks, and ethical AI frameworks.">
@@ -27,8 +31,8 @@
     <meta name="twitter:image" content="https://manuelsmathew.github.io/assets/profil.jpg">
     
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -81,6 +85,7 @@
                 <button class="filter-btn active" data-filter="all" style="background: var(--accent-primary); border: 2px solid var(--accent-primary); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">All</button>
                 <button class="filter-btn" data-filter="conference" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Conference</button>
                 <button class="filter-btn" data-filter="invited" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Invited Talks</button>
+                <button class="filter-btn" data-filter="workshop" style="background: transparent; border: 2px solid var(--border-color); color: var(--text-secondary); padding: 0.75rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 500; transition: all 0.3s ease;">Workshops</button>
             </div>
 
             <div class="card" data-category="2024">
@@ -108,13 +113,24 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 2rem;" class="presentation-item" data-category="conference">
+                <div style="margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);" class="presentation-item" data-category="conference">
                     <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">Wind Farm Performance Estimation using Deep Learning</h3>
                     <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">PHME 2024 - Prague, Czech Republic</p>
                     <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Presented a comprehensive deep learning architecture to estimate the wind farm level performance using SCADA data. This research enables more accurate performance monitoring and optimization strategies for large-scale wind energy installations.</p>
                     <div>
                         <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
                             <i class="fas fa-file-pdf"></i> Slides
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;" class="presentation-item" data-category="workshop">
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 1.2rem;">AI for Renewable Energy Workshop</h3>
+                    <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem;">UiA AI Workshop 2024 - Kristiansand, Norway</p>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Led a hands-on workshop on applying artificial intelligence techniques to renewable energy problems. Participants learned about machine learning applications in wind energy prediction, fault detection, and performance optimization through practical exercises.</p>
+                    <div>
+                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-primary); text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.9rem; margin-right: 1rem; transition: all 0.3s ease;">
+                            <i class="fas fa-file-pdf"></i> Materials
                         </a>
                     </div>
                 </div>
